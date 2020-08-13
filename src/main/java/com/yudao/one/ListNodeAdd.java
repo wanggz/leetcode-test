@@ -3,7 +3,7 @@ package com.yudao.one;
 import com.yudao.one.entry.ListNode;
 
 /**
- * 链表加法运算
+ * 链表加法运算   leetcode 2
  * 输入：(2 -> 4 -> 3) + (5 -> 6 -> 4)  两个已知链表对象ListNode l1, ListNode l2
  * 输出：7 -> 0 -> 8
  * 原因：342 + 465 = 807
