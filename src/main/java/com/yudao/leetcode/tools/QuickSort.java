@@ -1,7 +1,7 @@
-package com.yudao.one.tool;
+package com.yudao.leetcode.tools;
 
 /**
- *
+ * 快速排序
  */
 public class QuickSort {
 
