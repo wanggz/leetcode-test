@@ -1,4 +1,4 @@
-package com.yudao.leetcode.tools;
+package com.yudao.leetcode.sort.tools;
 
 /**
  * 快速排序
@@ -7,9 +7,9 @@ public class QuickSort {
 
     public static void main(String[] args) {
 
-        int [] a =  new int []{4,3,2,9,5};
+        int [] a =  new int []{-4,-2,-8};
 
-        sort(a,0,a.length-1,true);
+        sort(a,0,a.length-1,false);
 
         for(int i = 0; i< a.length; i++){
             System.out.print(a[i] + " ");
