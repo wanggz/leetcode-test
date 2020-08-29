@@ -1,6 +1,6 @@
-package com.yudao.one;
+package com.yudao.leetcode.list;
 
-import com.yudao.one.entry.ListNode;
+import com.yudao.leetcode.list.entry.ListNode;
 
 /**
  * 给定单链表的头结点 head，

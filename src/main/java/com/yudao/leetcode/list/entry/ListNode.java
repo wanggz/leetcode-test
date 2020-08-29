@@ -1,4 +1,4 @@
-package com.yudao.one.entry;
+package com.yudao.leetcode.list.entry;
 
 public class ListNode {
     public int val;
