@@ -3,32 +3,31 @@ package com.yudao.leetcode.list;
 import com.yudao.leetcode.list.entry.ListNode;
 
 /**
- * 给定单链表的头结点 head，
- * 实现一个调整链表的函数，从链表尾部开始，
- * 以 K 个结点为一组进行逆序翻转，头部剩余结点不足一组时，不需要翻转。
- * （不能使用队列或者栈作为辅助）  leetcode 25
+ * LeetCode 25-k个一组翻转链表
+ * 题目：
+ * 给出一个链表，每 k 个节点一组进行翻转，并返回翻转后的链表。
+ * k 是一个正整数，它的值小于或等于链表的长度。如果节点总数不是 k 的整数倍，那么将最后剩余节点保持原有顺序。
+ *
+ * 示例 :
+ * 给定这个链表：1->2->3->4->5
+ * 当 k = 2 时，应当返回: 2->1->4->3->5
+ * 当 k = 3 时，应当返回: 3->2->1->4->5
+ *
+ * 说明 :
+ * 你的算法只能使用常数的额外空间。
+ * 你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。
+ *
+ * ???
  */
 public class ListReverseByK {
 
     public static void main(String[] args) {
 
-        ListReverseByK listReverse = new ListReverseByK();
-
-        ListNode.printListNode(listReverse.reverseList(ListNode.buildListNode(new int[]{5,6,4})));
+        ListNode.printListNode(ListReverseByK.reverseKGroupPlus(ListNode.buildListNode(new int[]{5,6,4}), 2));
 
     }
 
-    private int linkedLength(ListNode head) {
-        int count = 0;
-        while (head != null) {
-            count++;
-            head = head.next;
-        }
-        return count;
-    }
-
-
-    public ListNode reverseKGroupPlus(ListNode head, int k) {
+    public static ListNode reverseKGroupPlus(ListNode head, int k) {
         if (head == null || k <= 1) return head;
 
         // 计算原始链表长度
@@ -55,8 +54,16 @@ public class ListReverseByK {
         return head;
     }
 
+    private static int linkedLength(ListNode head) {
+        int count = 0;
+        while (head != null) {
+            count++;
+            head = head.next;
+        }
+        return count;
+    }
 
-    public ListNode reverseKGroup(ListNode head, int k) {
+    public static ListNode reverseKGroup(ListNode head, int k) {
         // 增加虚拟头结点
         ListNode dummy = new ListNode(0);
         dummy.next = head;
@@ -85,7 +92,7 @@ public class ListReverseByK {
     }
 
     // 递归完成单链表翻转
-    private ListNode reverseList(ListNode head) {
+    private static ListNode reverseList(ListNode head) {
         if (head == null || head.next == null) return head;
 
         ListNode p = reverseList(head.next);
