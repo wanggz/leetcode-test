@@ -29,7 +29,6 @@ public class MyQueue {
         return data_stack.pop();
     }
 
-    /** Get the front element. */
     public int peek() {
         return data_stack.peek();
     }
