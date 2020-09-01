@@ -16,14 +16,13 @@ public class MyQueue {
 
     public void push(int x) {
         Stack<Integer> tmp_stack = new Stack<>();
-        tmp_stack.push(x);
         while (!data_stack.empty()){
             tmp_stack.push(data_stack.pop());
         }
+        tmp_stack.push(x);
         while (!tmp_stack.empty()){
             data_stack.push(tmp_stack.pop());
         }
-
     }
     public int pop() {
         return data_stack.pop();
@@ -41,13 +40,14 @@ public class MyQueue {
     public static void main(String[] args) {
 
         MyQueue queue = new MyQueue();
+
         queue.push(1);
         queue.push(2);
-        queue.push(3);
 
-        for(Integer i : queue.data_stack){
-            System.out.println(i);
-        }
+        System.out.println(queue.peek());  // 返回 1
+        System.out.println(queue.pop());   // 返回 1
+        System.out.println(queue.empty()); // 返回 false
+
 
     }
 }
