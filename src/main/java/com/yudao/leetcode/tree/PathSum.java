@@ -2,6 +2,7 @@ package com.yudao.leetcode.tree;
 
 import com.yudao.leetcode.tree.entry.TreeNode;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -32,15 +33,54 @@ import java.util.List;
  */
 public class PathSum {
 
-    public List<List<Integer>> pathSum(TreeNode root, int sum) {
-
-
-        return null;
+    public static List<List<Integer>> pathSum(TreeNode root, int sum) {
+        if(root == null) return new ArrayList<>();
+        List<List<Integer>> ans = new ArrayList<>();
+        if(root.val == sum && root.left == null && root.right == null){
+            List<Integer> arr = new ArrayList<>();
+            arr.add(root.val);
+            ans.add(arr);
+            return ans;
+        }
+        List<List<Integer>> letf = pathSum(root.left,sum-root.val);
+        List<List<Integer>> right = pathSum(root.right,sum-root.val);
+        for(List<Integer> node : letf){
+            node.add(0,root.val);
+            ans.add(node);
+        }
+        for(List<Integer> node : right){
+            node.add(0,root.val);
+            ans.add(node);
+        }
+        return ans;
     }
 
     public static void main(String[] args) {
+        TreeNode root = new TreeNode(5);
+        TreeNode node_2_1 = new TreeNode(4);
+        TreeNode node_2_2 = new TreeNode(8);
+        root.left = node_2_1;
+        root.right = node_2_2;
 
+        TreeNode node_3_1 = new TreeNode(11);
+        node_2_1.left = node_3_1;
 
+        TreeNode node_3_2 = new TreeNode(13);
+        TreeNode node_3_3 = new TreeNode(4);
+        node_2_2.left = node_3_2;
+        node_2_2.right = node_3_3;
+
+        TreeNode node_4_1 = new TreeNode(7);
+        TreeNode node_4_2 = new TreeNode(2);
+        node_3_1.left = node_4_1;
+        node_3_1.right = node_4_2;
+
+        TreeNode node_4_3 = new TreeNode(5);
+        TreeNode node_4_4 = new TreeNode(1);
+        node_3_3.left = node_4_3;
+        node_3_3.right = node_4_4;
+
+        System.out.println(PathSum.pathSum(root,22));
     }
 
 }

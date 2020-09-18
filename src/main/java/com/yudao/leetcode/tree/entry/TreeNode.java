@@ -15,6 +15,10 @@ public class TreeNode {
         right = null;
     }
 
+    public void printTree(TreeNode root){
+
+    }
+
 
 
 }
