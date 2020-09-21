@@ -11,6 +11,9 @@ import java.util.Stack;
  */
 public class LowestCommonAncestor {
 
+    /**
+     * 先序遍历二叉树，当找到第一个与p或q相同的节点的父节点即是所求节点。
+     */
     public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if(root == null || root == p || root == q) {
             return root;
