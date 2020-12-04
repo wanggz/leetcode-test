@@ -11,12 +11,12 @@ package com.yudao.leetcode.dynamic;
  * 输出: 6
  * 解释: 连续子数组 [4,-1,2,1] 的和最大，为 6。
  */
-public class MaxSubArray {
+public class Leet53_MaxSubArray {
 
     public static void main(String[] args) {
         int [] nums = new int[]{-2,1,-3,4,-1,2,1,-5,4};
 
-        MaxSubArray m = new MaxSubArray();
+        Leet53_MaxSubArray m = new Leet53_MaxSubArray();
         System.out.println(m.maxSubArray(nums));
     }
 
