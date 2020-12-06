@@ -9,11 +9,11 @@ package com.yudao.leetcode.dynamic;
  * 思路
  * 到达第i阶的方式数量 = 到达第i-1阶的方式数量 + 到达第i-2阶的方式数量
  */
-public class ClimbStairs {
+public class Leet70_ClimbStairs {
 
     public static void main(String[] args) {
 
-        ClimbStairs c = new ClimbStairs();
+        Leet70_ClimbStairs c = new Leet70_ClimbStairs();
         System.out.println(c.climbStairs(1));
 
     }

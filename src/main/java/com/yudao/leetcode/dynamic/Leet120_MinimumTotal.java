@@ -13,7 +13,7 @@ import java.util.List;
  *   [4,1,8,3]
  * ]
  */
-public class MinimumTotal {
+public class Leet120_MinimumTotal {
 
     public static void main(String[] args) {
         List<List<Integer>> triangle = new ArrayList<>();
@@ -36,7 +36,7 @@ public class MinimumTotal {
         l4.add(3);
         triangle.add(l4);
 
-        MinimumTotal m = new MinimumTotal();
+        Leet120_MinimumTotal m = new Leet120_MinimumTotal();
         System.out.println(m.minimumTotal(triangle));
 
     }

@@ -1,8 +1,5 @@
 package com.yudao.leetcode.dynamic;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * 322. 零钱兑换
  *
@@ -12,13 +9,13 @@ import java.util.Set;
  * 输出：3
  * 解释：11 = 5 + 5 + 1
  */
-public class CoinChange {
+public class Leet322_CoinChange {
 
     public static void main(String[] args) {
         int [] coins = new int[]{1,2,5,10};
         int amount = 14;
 
-        CoinChange c = new CoinChange();
+        Leet322_CoinChange c = new Leet322_CoinChange();
         System.out.println(c.coinChange(coins,amount));
     }
 

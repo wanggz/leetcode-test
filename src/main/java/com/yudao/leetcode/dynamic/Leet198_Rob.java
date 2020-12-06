@@ -1,17 +1,15 @@
 package com.yudao.leetcode.dynamic;
 
-import org.apache.hadoop.yarn.webapp.hamlet.Hamlet;
-
 /**
  * 198. 打家劫舍
  */
-public class Rob {
+public class Leet198_Rob {
 
     public static void main(String[] args) {
 
         int [] nums = new int[] {2,7,9,3,1};
 
-        Rob r = new Rob();
+        Leet198_Rob r = new Leet198_Rob();
         System.out.println(r.rob(nums));
 
     }
