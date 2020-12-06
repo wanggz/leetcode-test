@@ -32,7 +32,7 @@ import org.apache.hadoop.yarn.webapp.hamlet.Hamlet;
  * 链接：https://leetcode-cn.com/problems/assign-cookies
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class FindContentChildren {
+public class Leet455_FindContentChildren {
 
     public static int findContentChildren(int[] g, int[] s) {
 

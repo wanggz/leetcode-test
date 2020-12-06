@@ -38,7 +38,7 @@ package com.yudao.leetcode.greedy;
  * 1 <= A.length <= 100
  * 1 <= A[i].length <= 100
  */
-public class MinDeletionSize {
+public class Leet955_MinDeletionSize {
 
     public static void main(String[] args) {
 

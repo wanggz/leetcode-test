@@ -21,7 +21,7 @@ package com.yudao.leetcode.greedy;
  * 链接：https://leetcode-cn.com/problems/jump-game
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class CanJump {
+public class Leet55_CanJump {
 
     public static boolean canJump(int[] nums) {
 
@@ -37,7 +37,7 @@ public class CanJump {
 
     public static void main(String[] args) {
 
-        System.out.println(CanJump.canJump(new int[] {0}));
+        System.out.println(Leet55_CanJump.canJump(new int[] {0}));
     }
 
 }

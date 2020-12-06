@@ -30,7 +30,7 @@ import java.util.Stack;
  * 链接：https://leetcode-cn.com/problems/remove-k-digits
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class RemoveKdigits {
+public class Leet402_RemoveKdigits {
 
     public static String removeKdigits(String num, int k) {
         Stack<Integer> stack = new Stack<>();
@@ -61,8 +61,8 @@ public class RemoveKdigits {
     public static void main(String[] args) {
 
         //System.out.println(RemoveKdigits.removeKdigits("12345",2));     //123
-        System.out.println(RemoveKdigits.removeKdigits("1234567890",9));    //0
-        System.out.println(RemoveKdigits.removeKdigits("100200",1));
+        System.out.println(Leet402_RemoveKdigits.removeKdigits("1234567890",9));    //0
+        System.out.println(Leet402_RemoveKdigits.removeKdigits("100200",1));
         //System.out.println(RemoveKdigits.removeKdigits("1432219",3));   //1219
 
     }
