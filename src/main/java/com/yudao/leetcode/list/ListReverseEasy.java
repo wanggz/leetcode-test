@@ -18,11 +18,11 @@ public class ListReverseEasy {
 
         ListNode list = ListNode.buildListNode(new int[]{1,2,3});
 
-        ListNode.printListNode(reverseList(list));
+        ListNode.printListNode(solution(list));
     }
 
     /**
-     * 迭代法
+     * 迭代法 ***
      *
      * 思路：
      * tmp缓存oldhead后面的链表，将新链表追加到就旧链表的当前节点后面，并将追加后的值赋值给新链表，最后将oldhead指向tmp。
