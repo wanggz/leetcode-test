@@ -30,10 +30,10 @@ public class ListReverseEasy {
     public static ListNode solution(ListNode head){
         ListNode oldHead = head, newHead = null, tmp;
         while (oldHead !=null) {
-            tmp = oldHead.next;
-            oldHead.next = newHead;
-            newHead = oldHead;
-            oldHead = tmp;
+            tmp = oldHead;
+            oldHead = oldHead.next;
+            tmp.next = newHead;
+            newHead = tmp;
         }
         return newHead;
     }
